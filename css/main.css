@@ -15,7 +15,7 @@
     text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
     -webkit-tap-highlight-color: rgb(0, 0, 0);
-    test-transform: uppercase;
+    text-transform: uppercase;
 }
 
 .szh2 {
@@ -29,7 +29,7 @@
     text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
     -webkit-tap-highlight-color: rgb(0, 0, 0);
-    test-transform: uppercase;
+    text-transform: uppercase;
     margin-block-end: 24px;
     margin-block-start: 0px;
     margin-bottom: 24px;
