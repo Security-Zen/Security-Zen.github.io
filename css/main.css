@@ -132,3 +132,17 @@ ul.posts li {
     -webkit-font-smoothing: antialiased;
     -webkit-tap-highlight-color: rgb(0, 0, 0);
 }
+
+.szl {
+    font-size: 18px;
+    line-height: 27px;
+    font-family: Lato, arial, sans-serif;
+    letter-spacing: normal;
+    list-style-type: disc;
+    font-weight: 400;
+    overflow-wrap: break-word;
+    color: rgb(0, 0, 0);
+    text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: rgb(0, 0, 0);
+}
