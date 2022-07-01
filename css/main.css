@@ -93,13 +93,13 @@ ul.posts li {
 }
 
 .szh1 {
-    font-size: 24px;
-    line-height: 33.6px;
+    font-size: 22px;
+    line-height: 30.8px;
     font-family: 'Cabin', arial, sans-serif;
     letter-spacing: 1px;
     font-weight: 700;
     overflow-wrap: break-word;
-    color: rgb(0, 0, 0);
+    color: rgb(27, 27, 27);
     text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
     -webkit-tap-highlight-color: rgb(0, 0, 0);
@@ -107,9 +107,9 @@ ul.posts li {
 }
 
 .szh2 {
-    font-size: 24px;
-    line-height: 30px;
-    font-family: 'Cabin', arial, sans-serif;
+    font-size: 22px;
+    line-height: 27.5px;
+    font-family: Lato, arial, sans-serif;
     letter-spacing: normal;
     font-weight: 400;
     overflow-wrap: break-word;
@@ -118,16 +118,25 @@ ul.posts li {
     -webkit-font-smoothing: antialiased;
     -webkit-tap-highlight-color: rgb(0, 0, 0);
     test-transform: uppercase;
+    margin-block-end: 24px;
+    margin-block-start: 0px;
+    margin-bottom: 24px;
+    margin-inline-end: 0px;
+    margin-inline-start: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    max-width: 100%;
 }
 
 .szt {
-    font-size: 18px;
-    line-height: 27px;
+    font-size: 16px;
+    line-height: 24px;
     font-family: Lato, arial, sans-serif;
     letter-spacing: normal;
     font-weight: 400;
     overflow-wrap: break-word;
-    color: rgb(0, 0, 0);
+    color: rgb(94, 94, 94);
     text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
     -webkit-tap-highlight-color: rgb(0, 0, 0);
