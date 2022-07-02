@@ -108,6 +108,7 @@ ul.posts li {
 .szhlink {
     color: rgb(0, 0, 0);
 }
+
 .szhlink:hover {
     text-decoration: underline;
     color: #999;
