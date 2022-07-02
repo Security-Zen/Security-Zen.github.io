@@ -61,14 +61,6 @@
     color: rgb(0, 0, 0);
 }
 
-.szhlink {
-    text-decoration: underline;
-    color: rgb(0, 0, 0); !important;
-}
-.szhlink:hover {
-    color: rgb(0, 0, 0);
-}
-
 body {
     margin: 60px auto;
     width: 70%;
@@ -113,6 +105,13 @@ ul.posts li {
     list-style: none;
 }
 
+.szhlink {
+    text-decoration: underline;
+    color: rgb(0, 0, 0);
+}
+.szhlink:hover {
+    color: rgb(0, 0, 0);
+}
 
 /* Dropdown Button */
 .dropbtn {
