@@ -10,12 +10,27 @@ title: Security Zen, Doc-SF Actions
 	      </td>
 	      <td  style="width:90%">
 		    <p></p>
-        <p class="szt">Once you have made selections within Configure, SF Actions enable retrieving and deploying security to the currently connected environment.</p>
-        <p class="szt">Retrieves security of the configured selections from the currently connected environment.</p>
-        <p class="szt"><b>Important!</b>  Only the intersection of selected security files and selected entities will be retrieved.  Be cautious in making selections as there may be issues with retrieving very large amounts of data.  See Options documentation for an exception to the approach that the intersection of security files and entities are retrieved.</p>
-        <p class="szt">As part of the Retrieve process, you will be prompted to Load System Permissions.  Selecting Yes will load System Permissions associated with the selected Profiles and Permission Sets.</p>
-        <p class="szt">Note that only System Permissions that are true for at least one of the retrieved Profiles or Permission Sets are retrieved.  If  you want to retrieve all System Permissions, you should retrieve an Admin profile that contains all System Permissions.</p>
-        <p></p>
+                    <p class="szt">Once you have made selections within Configure, SF Actions enable retrieving and deploying security to the currently connected environment.</p>
+                    <p class="szt">Retrieves security of the configured selections from the currently connected environment.</p>
+                    <p class="szt"><b>Important!</b>  Only the intersection of selected security files and selected entities will be retrieved.  Be cautious in making selections as there may be issues with retrieving very large amounts of data.  See Options documentation for an exception to the approach that the intersection of security files and entities are retrieved.</p>
+                    <p class="szt">As part of the Retrieve process, you will be prompted to Load System Permissions.  Selecting Yes will load System Permissions associated with the selected Profiles and Permission Sets.</p>
+                    <p class="szt">Note that only System Permissions that are true for at least one of the retrieved Profiles or Permission Sets are retrieved.  If  you want to retrieve all System Permissions, you should retrieve an Admin profile that contains all System Permissions.</p>
+                    <p></p>
+	      </td>
+	   </tr>
+	</table>
+	<p class="szh1">SF Actions: Deploy...</p>
+	<table class="szTable">
+	   <tr>
+	      <td style="width:10%; vertical-align: top;">
+	      </td>
+	      <td  style="width:90%">
+		    <p></p>
+                    <p class="szt">Deploys security from the workspace to the currently connected environment.  Starting in version 3.1, all deploys are performed using ANT deploy method.  Upon deployment, a browser window will be automatically opened directing you to Setup->Environments->Deploy->Deployment Status in order to monitor the status of your deployment.</p>
+		    <p class="szt"><b>IMPORTANT:</b> Deploy of Muting Permission Sets is NOT supported due to Salesforce API restrictions.  Retrieve of Muting Permission Sets is provided for analysis and comparison purposes only.</p>
+                    <p class="szt">Starting in API 40, Permission Sets must be completely defined during a deploy.  This means the concept of deploying changes to a Permission Set for just some settings doesn't work anymore.  For this reason, Security Zen deploys are done at API 39.  This enables the ability to just change the security settings you are interested in for a particular function, but it also means we don't support deploying newer security features such as Muting Permission Sets.  Due to the limited use cases for Muting Permission Sets, we are comfortable that this is a good choice right now, but will continue to monitor changes in functionality and may revisit this decision in the future.</p>
+                    <p class="szt">* Deploy is only available to Security Zen Masters.</p>
+                    <p></p>
 	      </td>
 	   </tr>
 	</table>
