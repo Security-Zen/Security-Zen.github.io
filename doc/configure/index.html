@@ -67,10 +67,31 @@ title: Security Zen, Documentation
 	            <p class="szt">When selecting security files based on an entity, you may choose to select from Profiles or Permission Sets or both.  You may select to either add to any previously selected security file selections or replace any previously selected security file selections.</p>
 	            <p class="szt">* "Selecting Security Files Based On Entity Security" feature is only available for Security Zen Masters. </p>
 	            <p></p>
-		    <p class="szh2">Connect</p>
-		    <p class="szt">Select the <b>Connect</b> button to establish a connection.  This will populate the available selections within Configure for this particular environment.</p>
+		    <p class="szh2">Select Security Files based on a Class, Page, or Custom Permission</p>
+		    <p class="szt">Right-click on a particular entity (Class, Page, or Custom Permission) in order to select security files where access is granted (True) or access is not granted (False) for that selected entity.</p>
                     <p></p>
-		  </td>
+		    <p class="szh2">Select Security Files based on a Tab</p>
+		    <p class="szt">Right-click on a particular tab in order to select security files based on that Tab's permissions.  For Profiles, you can select security files where that Tab is Default On, Default Off or Hidden.  For Permission Sets, you can select security files where that Tab is Visible, Available or Hidden.</p>
+                    <p></p>
+		    <p class="szh2">Select Security Files based on an Object</p>
+		    <p class="szt">Right-click on a particular object in order to select security files based on that Object's permissions.  If you select multiple permissions (CREDVM), you can either select security files that provide any of the selected permissions (Or) or you can select security files that provide all of the selected permissions (And).</p>
+                    <p></p>
+		    <p class="szh2">Select Security Files based on a Field</p>
+		    <p class="szt">Richt-click on a particular field in order to select security files based on that Field's permissions such as Edit, Read, or Hidden.</p>
+                    <p></p>
+		    <p class="szh2">Filtering</p>
+		    <p class="szt">You may choose to either show or hide selections based on the filter text.  Filter criteria is case insensitive.  The wild card character "*" is supported.</p>
+		    <p class="szt">Hiding a node does <b>not</b> modify it's selection.  Hidden selected nodes are still selected and will be included during a retrieve operation.  It is recommended you remove filter criteria in order to see all selections prior to performing a retrieve operation.</p>
+		    <p class="szt">Selecting (or unselecting) a top level node in the tree (such as "Objects") will auto-select (or unselect) all of the displayed child nodes based on the filter criteria.  Nodes hidden by the filter criteria will not be modified.</p>
+		    <p class="szt">Fields and Record Types may be selected as children under the appropriate Object.  Filter criteria is applied to Object names, not Field or Record Type names.  If an Object name meets the filter criteria, all of the Object's Fields and Record Types will be displayed under that Object regardless of the filter criteria.</p>
+		    <p class="szt">Examples:</p>
+		    <ul>
+		       <li>In order to display all custom objects, you can enter "__c" and setting the filter criteria to Show.</li>
+		       <li>In order to hide all managed package objects, you can enter "__*__" and setting the filter criteria to Hide.</li>
+	            </ul>
+	            <p class="szt">* "Filtering" feature is only available for Security Zen Masters.</p>
+	            <p></p>
+	          </td>
 		</tr>
 	</table>
 	<table>
