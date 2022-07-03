@@ -32,7 +32,23 @@ title: Security Zen, Documentation
 		    <p class="szh2">Password</p>
                     <p class="szt">Enter your Salesforce Password.  Depending on the location you are connecting from, you may need to provide your Password and Token.  Selecting the Show checkbox displays the Password.</p>
                     <p></p>
-		   </td>
+		    <p class="szh2">Nickname</p>
+                    <p class="szt">Providing a Nickname helps identify where security files are retrieved from.  Also, if you want to save this login information, the nickname is required.</p>
+                    <p></p>
+		    <p class="szh2">Color</p>
+                    <p class="szt">You may optionally select a color to be associated with this connection.  Within the workspace, column headers will be displayed with the selected color.  This is particularly useful when comparing security settings from different connections.</p>
+                    <p></p>
+		    <p class="szh2">Security Lists</p>
+                    <p class="szt">Normally, Security Zen retrieves a list of entities and security files upon connection to an environment.  If you are using Security Zen to just create an ANT package or View Deploy Details, you can connect faster by skipping the retrieval of these entities and security files (i.e. uncheck this checkbox).  Default is checked, so lists of entities and security files are retrieved upon connecting.</p>
+                    <p></p>
+		    <p class="szh2">Save</p>
+                    <p class="szt">Selecting the Save checkbox will save the connection information for easy access later on.</p>
+		    <p class="szt"><b>WARNING:</b> Usernames and passwords will be stored unencrypted on your machine.  Do NOT save a connection if using Security Zen on a shared computer or if there is a risk that this information could be accessed.</p>
+                    <p></p>
+		    <p class="szh2">OAuth</p>
+                    <p class="szt">If you are using the OAuth feature, a little set up is required within Salesforce first.</p>
+                    <p></p>		      
+		</td>
 	   </tr>
   </table>
 </div>
