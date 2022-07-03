@@ -47,6 +47,21 @@ title: Security Zen, Documentation
                     <p></p>
 		    <p class="szh2">OAuth</p>
                     <p class="szt">If you are using the OAuth feature, a little set up is required within Salesforce first.</p>
+		    <p class="szt">Within Salesforce, go to Setup->Apps->App Manager.  Select "New Connect App" button and fill in the following:</p>
+		    <ul>
+		       <li class="szt">Connected App Name: Security Zen</li>
+	               <li class="szt">Enable OAuth Settings: Checked</li>
+	               <li class="szt">Callback URL: https://www.securityzen.net/callback</li>
+		       <li>Selected OAuth Scopes: Full Access (full)</li>
+		       <li>Require Secret for Web Server Flow: Unchecked</li>
+		    </ul>
+		    <p class="szt">Select Save button</p>
+		    <p class="szt">Select Continue button</p>
+		    <p class="szt">Allow up to 10 minutes for changes to take effect on the server before using the connected app.</p>
+		    <p></p>
+		    <p class="szt">Copy the Consumer Key from the Connected App you just configured within Salesforce.</p>
+		    <p></p>
+		    <p class="szt">Within Security Zen, create a connection using the OAuth option and paste the Consumer Key.  When connecting using the OAuth option, a browser window will be launched prompting you to enter your Salesforce username and password for the OAuth Login.</p>
                     <p></p>		      
 		</td>
 	   </tr>
