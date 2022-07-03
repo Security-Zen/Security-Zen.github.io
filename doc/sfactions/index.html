@@ -30,7 +30,12 @@ title: Security Zen, Doc-SF Actions
                     <p class="szt">Starting in API 40, Permission Sets must be completely defined during a deploy.  This means the concept of deploying changes to a Permission Set for just some settings doesn't work anymore.  For this reason, Security Zen deploys are done at API 39.  This enables the ability to just change the security settings you are interested in for a particular function, but it also means we don't support deploying newer security features such as Muting Permission Sets.  Due to the limited use cases for Muting Permission Sets, we are comfortable that this is a good choice right now, but will continue to monitor changes in functionality and may revisit this decision in the future.</p>
                     <p class="szt">* Deploy is only available to Security Zen Masters.</p>
                     <p></p>
-	      </td>
+	            <p class="szh2">What is the difference between blank and false in cells?</p>
+		    <p class="szt">Both blank and false means security is not granted.  However, in some areas the lack of a permission is not stored in Salesforce and therefore a particular security setting may show up as blank.</p>
+		    <p class="szt"><b>Important!</b>  Blank cells are <b>NOT</b> deployed during a deploy command.</p>
+		    <p class="szt">Deploying a blank cell means the security for that cell will <b>NOT</b> be modified in the deployed environment.</p>
+		    <p class="szt">If you wish to remove security for a cell, the cell must be set to the appropriate setting for that entity type to remove security in the deployed environment.</p>
+	       </td>
 	   </tr>
 	</table>
 	<table>
