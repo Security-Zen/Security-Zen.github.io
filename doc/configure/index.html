@@ -25,17 +25,11 @@ title: Security Zen, Documentation
 	      </td>
 	      <td  style="width:70%">
 		    <p></p>
-		    <p class="szh2">Authentication</p>
-                    <p class="szt">Select between connecting using a Password or an OAuth connection.  The following instructions are for using a Password.<br/>See instructions at the bottom of the page for setting up an OAuth connection within Salesforce.</p>
+                    <p class="szt">Select the security files (Profiles, Permission Sets and Muting Permission Sets) and Entities (Classes, Pages, Tabs, Objects, Fields, Record Types, Custom Permissions and Applications).<br/>* Security Files are limited to a total of 5 for non Security Zen Masters.  No limit on Security Files for Security Zen Masters.<br/></p>
                     <p></p>
-		    <p class="szh2">Environment</p>
-                    <p class="szt">Select whether this is a Production Environment, Sandbox Environment, or Environment with a Custom Domain name.</p>
-		    <ul>
-		       <li class="szt">Production uses: https://login.salesforce.com</li>
-	               <li class="szt">Sandbox uses: https://test.salesforce.com</li>
-	               <li class="szt">Custom uses the URL you specify which is  often in the format: https://customdomain.my.salesforce.com or https://customdomain.sandbox.my.salesforce.com (if you have enabled "Enhanced Domains" and are connecting to a custom named sandbox environment)</li>
-		    </ul>
-		    <p class="szt">You will only be prompted to enter a URL when "Custom" Environment is selected.</p>
+		    <p class="szh2">Select By Workspace</p>
+                    <p class="szt">The tree of Security Files and Entities is cleared out and then populated each time you connect to an environment.  If you want to compare two environments, this means making the same Configure selections twice.</p>
+		    <p class="szt">The "Select By Workspace" button selects Security Files and Entities to retrieve based on what is currently in the workspace, so you don't have to make the same selections twice.</br>* "Select By Workspace" feature is only available to Security Zen Masters.</p>
                     <p></p>
 		    <p class="szh2">Username</p>
                     <p class="szt">Enter your Salesforce Username.</p>
