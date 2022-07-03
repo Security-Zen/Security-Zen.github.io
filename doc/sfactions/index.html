@@ -1,0 +1,116 @@
+---
+layout: default
+title: Security Zen, Doc-SF Actions
+---
+<div class="blurb">
+	<p class="szh1">SF Actions: Retrieve...</p>
+	<table class="szTable">
+	   <tr>
+	      <td style="width:10%; vertical-align: top;">
+	      </td>
+	      <td  style="width:90%">
+		    <p></p>
+        <p class="szt">Once you have made selections within Configure, SF Actions enable retrieving and deploying security to the currently connected environment.</p>
+        <p class="szt">Retrieves security of the configured selections from the currently connected environment.</p>
+        <p class="szt"><b>Important!</b>  Only the intersection of selected security files and selected entities will be retrieved.  Be cautious in making selections as there may be issues with retrieving very large amounts of data.  See Options documentation for an exception to the approach that the intersection of security files and entities are retrieved.</p>
+        <p class="szt">As part of the Retrieve process, you will be prompted to Load System Permissions.  Selecting Yes will load System Permissions associated with the selected Profiles and Permission Sets.</p>
+        <p class="szt">Note that only System Permissions that are true for at least one of the retrieved Profiles or Permission Sets are retrieved.  If  you want to retrieve all System Permissions, you should retrieve an Admin profile that contains all System Permissions.</p>
+        <p></p>
+	      </td>
+	   </tr>
+	</table>
+	<table>
+	   <tr>
+	      <td style="width:30%; vertical-align: top;">
+		   <p></p>
+		   <img style="width: 95%" src="Connect2.jpg" alt="Connection">
+	      </td>
+	      <td  style="width:70%">
+		    <p></p>
+		    <p class="szh2">Authentication</p>
+                    <p class="szt">Select between connecting using a Password or an OAuth connection.  The following instructions are for using a Password.<br/>See instructions at the bottom of the page for setting up an OAuth connection within Salesforce.</p>
+                    <p></p>
+		    <p class="szh2">Environment</p>
+                    <p class="szt">Select whether this is a Production Environment, Sandbox Environment, or Environment with a Custom Domain name.</p>
+		    <ul>
+		       <li class="szt">Production uses: https://login.salesforce.com</li>
+	               <li class="szt">Sandbox uses: https://test.salesforce.com</li>
+	               <li class="szt">Custom uses the URL you specify which is  often in the format: https://customdomain.my.salesforce.com or https://customdomain.sandbox.my.salesforce.com (if you have enabled "Enhanced Domains" and are connecting to a custom named sandbox environment)</li>
+		    </ul>
+		    <p class="szt">You will only be prompted to enter a URL when "Custom" Environment is selected.</p>
+                    <p></p>
+		    <p class="szh2">Username</p>
+                    <p class="szt">Enter your Salesforce Username.</p>
+                    <p></p>
+		    <p class="szh2">Password</p>
+                    <p class="szt">Enter your Salesforce Password.  Depending on the location you are connecting from, you may need to provide your Password and Token.  Selecting the Show checkbox displays the Password.</p>
+                    <p></p>
+		    <p class="szh2">Nickname</p>
+                    <p class="szt">Providing a Nickname helps identify where security files are retrieved from.  Also, if you want to save this login information, the nickname is required.</p>
+                    <p></p>
+		    <p class="szh2">Color</p>
+                    <p class="szt">You may optionally select a color to be associated with this connection.  Within the workspace, column headers will be displayed with the selected color.  This is particularly useful when comparing security settings from different connections.</p>
+                    <p></p>
+		    <p class="szh2">Security Lists</p>
+                    <p class="szt">Normally, Security Zen retrieves a list of entities and security files upon connection to an environment.  If you are using Security Zen to just create an ANT package or View Deploy Details, you can connect faster by skipping the retrieval of these entities and security files (i.e. uncheck this checkbox).  Default is checked, so lists of entities and security files are retrieved upon connecting.</p>
+                    <p></p>
+		    <p class="szh2">Save</p>
+                    <p class="szt">Selecting the Save checkbox will save the connection information for easy access later on.</p>
+		    <p class="szt"><b>WARNING:</b> Usernames and passwords will be stored unencrypted on your machine.  Do NOT save a connection if using Security Zen on a shared computer or if there is a risk that this information could be accessed.</p>
+                    <p></p>
+		    <p class="szh2">Connect</p>
+		    <p class="szt">Select the <b>Connect</b> button to establish a connection.  This will populate the available selections within Configure for this particular environment.</p>
+                    <p></p>
+		  </td>
+		</tr>
+	</table>
+	<p class="szh1">Connections: Saved</p>
+	<table class="szTable">
+	   <tr>
+	      <td style="width:10%; vertical-align: top;">
+	      </td>
+	      <td  style="width:90%">
+		    <p></p>
+		    <p class="szt">If you have saved connections, they will show as submenus under the Saved menu in order to provide easy access to these connections.  Selecting a Saved connection prompts with the connection window where you can connect or modify parameters.</p>
+		  </td>
+		</tr>
+	</table>
+	<p class="szh1">Connections: Disconnect</p>
+	<table class="szTable">
+	   <tr>
+	      <td style="width:10%; vertical-align: top;">
+	      </td>
+	      <td  style="width:90%">
+		    <p></p>
+		    <p class="szt">This will disconnect if a connection is currently established.</p>
+		    <p></p>
+	       </td>
+	    </tr>
+	</table>
+	<p class="szh1">OAuth</p>
+	<table class="szTable">
+	   <tr>
+	      <td style="width:10%; vertical-align: top;">
+	      </td>
+	      <td  style="width:90%">
+		    <p></p>
+		    <p class="szh2">Setting up OAuth</p>
+                    <p class="szt">If you are using the OAuth feature, a little set up is required within Salesforce first.</p>
+		    <p class="szt">Within Salesforce, go to Setup->Apps->App Manager.  Select "New Connect App" button and fill in the following:</p>
+		    <ul>
+		       <li class="szt">Connected App Name: Security Zen</li>
+	               <li class="szt">Enable OAuth Settings: Checked</li>
+	               <li class="szt">Callback URL: https://www.securityzen.net/callback</li>
+		       <li class="szt">Selected OAuth Scopes: Full Access (full)</li>
+		       <li class="szt">Require Secret for Web Server Flow: Unchecked</li>
+		    </ul>
+		    <p class="szt">Select Save button<br/>Select Continue button<br/>Allow up to 10 minutes for changes to take effect on the server before using the connected app.</p>
+		    <p></p>
+		    <p class="szt">Copy the Consumer Key from the Connected App you just configured within Salesforce.</p>
+		    <p></p>
+		    <p class="szt">Within Security Zen, create a connection using the OAuth option and paste the Consumer Key.  When connecting using the OAuth option, a browser window will be launched prompting you to enter your Salesforce username and password for the OAuth Login.</p>
+                    <p></p>	
+	      </tr>
+	</table>
+      
+</div>
