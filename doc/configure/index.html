@@ -40,19 +40,33 @@ title: Security Zen, Documentation
 		    <p class="szt">If Security Files have already been selected in the Security Files tree, you will be prompted to either clear out or add to the existing selections.</p>
 		    <p class="szt">* "Select By User" feature is only available for Security Zen Masters.</p>
 	            <p></p>
-		    <p class="szh2">Nickname</p>
-                    <p class="szt">Providing a Nickname helps identify where security files are retrieved from.  Also, if you want to save this login information, the nickname is required.</p>
+		    <p class="szh2">Select By Perm Set Group...</p>
+                    <p class="szt">The "Select By Perm Set Group" button enables you to select Permission Sets by selecting a Permission Set Group.<br/>* "Select By Perm Set Group" feature is only available for Security Zen Masters.</p>
                     <p></p>
-		    <p class="szh2">Color</p>
-                    <p class="szt">You may optionally select a color to be associated with this connection.  Within the workspace, column headers will be displayed with the selected color.  This is particularly useful when comparing security settings from different connections.</p>
+		    <p class="szh2">Select Permission Set Group</p>
+                    <p class="szt">Enter a Permission Set Group name (or part of a name) and "Enter" to retrieve a list of Permission Set Groups.  A maximum of 30 Permission Set Groups will be returned.  Selecting a particular Permission Set Group will select the Permission Sets within this Permission Set Group in the Security Files tree.</p>
+                    <p class="szt">If a filter is applied, the Permission Sets will be selected, however, depending on the filter criteria you might not see the selection until the filter is removed.</p>
+	            <p class="szt">If Security Files have already been selected in the Security Files tree, you will be prompted to either clear out or add to the existing selections.</p>
+	            <p class="szt">* "Select By Permission Set Group" feature is only available for Security Zen Masters.</p>
+		    <p></p>
+		    <p class="szh2">Object Selection</p>
+                    <p class="szt">Selecting an Object normally auto-selects the Fields and Record Types associated with that Object.</p>
+	            <p class="szt">If you want to retrieve an Object's permissions without Field or Record Type information, select the "Select Objects without selecting Fields or Record Types" checkbox.  This is particularly useful if you want to retrieve/analyze/deploy a large amount of permissions at the object level.</p>
                     <p></p>
-		    <p class="szh2">Security Lists</p>
-                    <p class="szt">Normally, Security Zen retrieves a list of entities and security files upon connection to an environment.  If you are using Security Zen to just create an ANT package or View Deploy Details, you can connect faster by skipping the retrieval of these entities and security files (i.e. uncheck this checkbox).  Default is checked, so lists of entities and security files are retrieved upon connecting.</p>
-                    <p></p>
-		    <p class="szh2">Save</p>
-                    <p class="szt">Selecting the Save checkbox will save the connection information for easy access later on.</p>
-		    <p class="szt"><b>WARNING:</b> Usernames and passwords will be stored unencrypted on your machine.  Do NOT save a connection if using Security Zen on a shared computer or if there is a risk that this information could be accessed.</p>
-                    <p></p>
+		    <p class="szh2">Selecting Security Files Based On Entity Security</p>
+                    <p class="szt">* You may select security files (Profiles and Permission Sets) based on a particular entity.  With the Entities radio button selected, right-click on a particular entity of one of the following types in order to select security files based on that entity's permissions:</p>
+		    <ul>
+			<li>Classes</li>
+			<li>Pages</li>
+			<li>Tabs</li>
+			<li>Objects</li>
+			<li>Fields</li>
+			<li>Custom Permissions</li>
+	            </ul>
+	            <p class="szt">When selecting security files based on an entity, you may choose to select from Profiles or Permission Sets or both.  You may select to either add to any previously selected security file selections or replace any previously selected security file selections.</p>
+	            <p class="szt">When selecting security files based on an entity, you may choose to select from Profiles or Permission Sets or both.  You may select to either add to any previously selected security file selections or replace any previously selected security file selections.</p>
+	            <p class="szt">* "Selecting Security Files Based On Entity Security" feature is only available for Security Zen Masters. </p>
+	            <p></p>
 		    <p class="szh2">Connect</p>
 		    <p class="szt">Select the <b>Connect</b> button to establish a connection.  This will populate the available selections within Configure for this particular environment.</p>
                     <p></p>
