@@ -107,26 +107,26 @@ title: Security Zen, Doc-Workspace
 		    <li class="szt szm0">Salesforce License</li>
 	            <li class="szt szm0">Blank for Permission Sets</li>
 		  </ul>
+		 <p></p>
+		 <p class="szh2">Entering data</p>
+		 <p class="szt">Select an individual cell to edit values one at a time.<br/>Select multiple cells and enter a single letter value to apply that value to all of the selected cells.<br/>Select multiple cells and select Ctrl+C to copy multiple values.<br/>Select a single cell and select Ctrl+V to paste the copied cell(s).  If multiple cells were copied, the copied cells will be pasted using the single cell as the top left corner of the copied cells.</p>
 	      </td>
 	   </tr>
 	</table>
-	<p class="szh1">SF Actions: Deploy...</p>
+	<p class="szh1">Sort Rows</p>
 	<table class="szTable">
 	   <tr>
 	      <td style="width:10%; vertical-align: top;">
 	      </td>
 	      <td  style="width:90%">
 		    <p></p>
-                    <p class="szt">Deploys security from the workspace to the currently connected environment.  Starting in version 3.1, all deploys are performed using ANT deploy method.  Upon deployment, a browser window will be automatically opened directing you to Setup->Environments->Deploy->Deployment Status in order to monitor the status of your deployment.</p>
-		    <p class="szt"><b>IMPORTANT:</b> Deploy of Muting Permission Sets is NOT supported due to Salesforce API restrictions.  Retrieve of Muting Permission Sets is provided for analysis and comparison purposes only.</p>
-                    <p class="szt">Starting in API 40, Permission Sets must be completely defined during a deploy.  This means the concept of deploying changes to a Permission Set for just some settings doesn't work anymore.  For this reason, Security Zen deploys are done at API 39.  This enables the ability to just change the security settings you are interested in for a particular function, but it also means we don't support deploying newer security features such as Muting Permission Sets.  Due to the limited use cases for Muting Permission Sets, we are comfortable that this is a good choice right now, but will continue to monitor changes in functionality and may revisit this decision in the future.</p>
-                    <p class="szt">* Deploy is only available to Security Zen Masters.</p>
-                    <p></p>
-	            <p class="szh2">What is the difference between blank and false in cells?</p>
-		    <p class="szt">Both blank and false means security is not granted.  However, in some areas the lack of a permission is not stored in Salesforce and therefore a particular security setting may show up as blank in the workspace.</p>
-		    <p class="szt"><b>Important!</b>  Blank cells are <b>NOT</b> deployed during a deploy command.</p>
-		    <p class="szt">Deploying a blank cell means the security for that cell will <b>NOT</b> be modified in the deployed environment.</p>
-		    <p class="szt">If you wish to remove security for a cell, the cell must be set to the appropriate setting for that entity type to remove security in the deployed environment.</p>
+                    <p class="szt">Provides options for sorting the rows containing entities.  Options include:</p>
+		      <ul>
+			      <li class="szt">Standard: This is the default order entities are displayed.  This groups entities together by the types of entity.</li>
+			      <li class="szt">Object: This will group fields, record types and object entities that are part of an object together.</li>
+			      <li class="szt">Type->Name: This sorts entities first by Type and then by Name in either ascending or descending order.</li>
+			      <li class="szt">Name->Type: This sorts entities first by Name and then by Type in either ascenting or descending order.</li>
+		      </ul>
 	       </td>
 	   </tr>
 	</table>
