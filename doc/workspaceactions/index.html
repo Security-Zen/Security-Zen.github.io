@@ -168,7 +168,47 @@ title: Security Zen, Doc-Workspace
 		   </td>
 	   </tr>
 	</table>
-	<p class="szh1">SF Actions: Security Assignment Analysis</p>
+	</table>
+	<p class="szh1">Workspace Actions: Show Columns</p>
+	<table class="szTable">
+	   <tr>
+	      <td style="width:10%; vertical-align: top;">
+	      </td>
+	      <td  style="width:90%">
+		    <p></p>
+                    <p class="szt szm0">Determines which columns to show.  Options Include:</p>
+		      <ul class="szm0">
+			      <li class="szt">All: Displays all retrieved security files.</li>
+			      <li class="szt">Profiles: Displays only profiles.</li>
+			      <li class="szt">Permission Sets: Displays only permission sets.</li>
+			      <li class="szt">With Zero Users: Displays profiles and permissions sets with zero users.  Note that the Option "Active Users Only" affects the count of Users for profiles and permission sets.</li>
+			      <li class="szt">With Non Zero Users: Displays profiles and permissions sets with one or more users.  Note that the Option "Active Users Only" affects the count of Users for profiles and permission sets.</li>
+			      <li class="szt">With Environment Differences: If you have retrieved the same security files from different environments, you can use Workspace Actions->Highlight Environment Differences.  After using the Highlight Environment Differences function, this option shows only columns with differences between environments.  Other columns will be hidden. </li>
+			      <li class="szt">By Name: Enter the name of a security file (or part of a name).  Columns with security file names that contain the entered text will be displayed.</li>
+			      <li class="szt">By User*: Displays a Profile and Permission Sets based on a selected user.  Note that the list of users and the Profile and Permission Sets associated to a user is based on the <b>CURRENT</b> connection.</li>
+			      <li class="szt">By Permission Set Group*: Displays Permission Sets based on a select Permission Set Group.  Note that the list of Permission Set Groups and the associated Permission Sets is based on the <b>CURRENT</b> connection.</li>
+			      <li class="szt">Permission Sets: Displays only permission sets.</li>
+			      <li class="szt">Permission Sets: Displays only permission sets.</li>
+			      <li class="szt">Permission Sets: Displays only permission sets.</li>
+			      <li class="szt">Permission Sets: Displays only permission sets.</li>
+			      <li class="szt">Permission Sets: Displays only permission sets.</li>
+			      <li class="szt">Permission Sets: Displays only permission sets.</li>
+		      </ul>
+		      <p class="szt">*  "Show Columns->By User" feature is only available for Security Zen Masters.<br/>* "Show Columns->By Permission Set Group" feature is only available for Security Zen Masters.</p>
+	       </td>
+	   </tr>
+	</table>
+	<p class="szh1">Freeze Columns</p>
+	<table class="szTable">
+	   <tr>
+	      <td style="width:10%; vertical-align: top;">
+	      </td>
+	      <td  style="width:90%">
+		    <p></p>
+                    <p class="szt">Freezes or Unfreezes the Type and Name columns.  Freezing these columns applies when there are many security files.  When scrolling to the right, the Type and Name columns would normally scroll off to the left.  Freezing the columns prevents them from scrolling off to the left.</p>
+	       </td>
+	   </tr>
+	</table>        <p class="szh1">SF Actions: Security Assignment Analysis</p>
 	<table class="szTable">
 	   <tr>
 	      <td style="width:30%; vertical-align: top;">
