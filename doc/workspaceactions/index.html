@@ -378,6 +378,22 @@ title: Security Zen, Doc-Workspace
 		      <p class="szt">Only retrieved entities will be copied.  Entities not retrieved or not supported by Security Zen such as, but not limited to, Assigned Connected Apps, External Data Source Access, Named Credential Access, Data Category Visibility, Flow Access, and Service Presence Statuses Access will not be copied.</p>
 		      <p class="szt">You must "Deploy" the new Permission Set to Salesforce in order to create the new Permission Set in Salesforce.  Be sure to specify a new unique name for the Permission Set.  When you go to deploy the Permission Set, you should be prompted that you are "inserting" the Permission Set instead of "updating" an existing Permission Set.  If you are prompted that you are "updating" the Permission Set, then the Name of the Permission Set is not unique.</p>
 		      <p class="szt"><b>IMPORTANT:</b> Note that some differences may be introduced based on dependency requirements and differences between Profile and Permission Set structures.  It is recommended that after deploying the the copied Permission Set to Salesforce, a detailed comparison is performed between the original Profile and the copied Permission Set to identify any modifications introduced during deployment.</p>
+		   <p></p>
+		    <p class="szh2">Merge to New Permission Set</p>
+		    <p class="szt">This option is only available after you have selected cells from multiple Permission Sets, and then right click.  You will be prompted to provide a Name, Label and Description for a new Permission Set based on the selected Permission Sets.</p>
+		    <p class="szt szm0">Select "Ok" to create the new Permission Set which will be added as a new column in the workspace.  Entity permission values will be merged based on the selected Permission Sets to the new Permission Set.  Two Merge approaches are available:</p>
+		    <ul class="szm0">
+		          <li class="szt">OR: New Entity Permission is the highest permission granted from any of the source Permission Sets </li>
+		          <li class="szt">AND: New Entity Permission is the highest permission granted by all of the source Permission Sets</li>
+		      </ul>
+		    <p class="szt szm0">For Example, if merging two permission sets where one grants Read access to a field and the second grants Edit access to the same field, then the new Permission Set will have the following access:</p>
+		    <ul class="szm0">
+		          <li class="szt">OR: Edit access because this is the highest permission granted by any of the source Permission Sets</li>
+		          <li class="szt">AND: Read access because all source Permission Sets grant this access</li>
+		      </ul>		      
+		      <p class="szt">If the source Permission Sets are associated with different Licenses, you will be prompted to select one of the License to associate with the new Permission Set.  If this occurs, be advised that not all entities are available with all  license types.  Deployment may fail if you select a license that does not include the select entities.  Use caution when merging Permission Sets with different license types.</p>
+		      <p class="szt">Only retrieved entities will be merged.  Entities not retrieved or not supported by Security Zen such as, but not limited to, Assigned Connected Apps, External Data Source Access, Named Credential Access, Data Category Visibility, Flow Access, and Service Presence Statuses Access will not be merged.</p>
+		      <p class="szt">You must "Deploy" the new Permission Set to Salesforce in order to create the new Permission Set in Salesforce.  Be sure to specify a new unique name for the Permission Set.  When you go to deploy the Permission Set, you should be prompted that you are "inserting" the Permission Set instead of "updating" an existing Permission Set.  If you are prompted that you are "updating" the Permission Set, then the Name of the Permission Set is not unique.</p>
 		</td>
 	   </tr>
 	</table>
