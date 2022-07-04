@@ -187,18 +187,12 @@ title: Security Zen, Doc-Workspace
 			      <li class="szt">By Name: Enter the name of a security file (or part of a name).  Columns with security file names that contain the entered text will be displayed.</li>
 			      <li class="szt">By User*: Displays a Profile and Permission Sets based on a selected user.  Note that the list of users and the Profile and Permission Sets associated to a user is based on the <b>CURRENT</b> connection.</li>
 			      <li class="szt">By Permission Set Group*: Displays Permission Sets based on a select Permission Set Group.  Note that the list of Permission Set Groups and the associated Permission Sets is based on the <b>CURRENT</b> connection.</li>
-			      <li class="szt">Permission Sets: Displays only permission sets.</li>
-			      <li class="szt">Permission Sets: Displays only permission sets.</li>
-			      <li class="szt">Permission Sets: Displays only permission sets.</li>
-			      <li class="szt">Permission Sets: Displays only permission sets.</li>
-			      <li class="szt">Permission Sets: Displays only permission sets.</li>
-			      <li class="szt">Permission Sets: Displays only permission sets.</li>
 		      </ul>
 		      <p class="szt">*  "Show Columns->By User" feature is only available for Security Zen Masters.<br/>* "Show Columns->By Permission Set Group" feature is only available for Security Zen Masters.</p>
 	       </td>
 	   </tr>
 	</table>
-	<p class="szh1">Freeze Columns</p>
+	<p class="szh1">Workspace Actions: Freeze Columns</p>
 	<table class="szTable">
 	   <tr>
 	      <td style="width:10%; vertical-align: top;">
@@ -209,7 +203,7 @@ title: Security Zen, Doc-Workspace
 	       </td>
 	   </tr>
 	</table>
-	<p class="szh1">Fill Blanks with False</p>
+	<p class="szh1">Workspace Actions: Fill Blanks with False</p>
 	<table class="szTable">
 	   <tr>
 	      <td style="width:10%; vertical-align: top;">
@@ -221,7 +215,20 @@ title: Security Zen, Doc-Workspace
 	      </td>
 	   </tr>
 	</table>
-        <p class="szh1">SF Actions: Security Assignment Analysis</p>
+	<p class="szh1">Workspace Actions: Remove Entities From Workspace Not In Connection</p>
+	<table class="szTable">
+	   <tr>
+	      <td style="width:10%; vertical-align: top;">
+	      </td>
+	      <td  style="width:90%">
+		    <p></p>
+                    <p class="szt">Frequently, there are differences in entities between environments.  Security for an entity cannot be deployed to an environment if the entity does not exist in the target environment.</p>
+                    <p class="szt">If you do not use this option prior to deployment, and there are entities in the workspace that do not exist in the target environment, you will get an error upon deployment.  The problem is the Salesforce error only specifies the first missing entity which results in a tedious process of deleting one row at a time.  This feature was developed to avoid this tedious process.</p>
+		    <p class="szt"><b>IMPORTANT!</b>  It is recommended that you back up the workspace using the Export CSV File function prior to using this function because this feature deletes rows from the Workspace.</p>
+                    <p class="szt">Once the workspace is configured and ready for deployment, connect to the target environment.  Select this option to delete rows in the workspace that do not exist in the target environment.</p>
+	      </td>
+	   </tr>
+	</table>        <p class="szh1">SF Actions: Security Assignment Analysis</p>
 	<table class="szTable">
 	   <tr>
 	      <td style="width:30%; vertical-align: top;">
