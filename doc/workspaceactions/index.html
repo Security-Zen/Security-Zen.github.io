@@ -228,7 +228,22 @@ title: Security Zen, Doc-Workspace
                     <p class="szt">Once the workspace is configured and ready for deployment, connect to the target environment.  Select this option to delete rows in the workspace that do not exist in the target environment.</p>
 	      </td>
 	   </tr>
-	</table>        <p class="szh1">SF Actions: Security Assignment Analysis</p>
+	</table>
+	<p class="szh1">Workspace Actions: Add Missing Objects to Workspace From Connection</p>
+	<table class="szTable">
+	   <tr>
+	      <td style="width:10%; vertical-align: top;">
+	      </td>
+	      <td  style="width:90%">
+		    <p></p>
+                    <p class="szt">When  a Profile is inserted into an environment, the Salesforce profile creation process starts  by cloning the "Standard" profile.  The permissions you specify in  Security Zen for your new profile are then applied on top of the cloned  "Standard" profile.  This can lead to some unexpected results!</p>
+                    <p class="szt">This function addresses this issue by adding a row in the workspace for each Object in the connected Target environment not already listed in the workspace.  For Profiles that do not exist in the Target environment, Objects added will have the N value to indicate no access.  For Profiles that already exist in the Target Environment and for Permission Sets, Objects added will have a Blank value to not change the permission in the target environment.</p>
+		    <p class="szt"><b>IMPORTANT!</b>  Not all objects are listed in the Configure window and therefore not all objects may be added using this function.  Work.com objects are known to not be included, but there may be others depending on your particular environment.  Always check the final permissions in Salesforce to ensure the desired permissions have been assigned.</p>
+                    <p class="szt">Once the workspace is configured and ready for deployment, connect to the target environment.  Select this option to add Object rows in the workspace that exist in the target environment, but are not yet specified in the workspace.</p>
+	      </td>
+	   </tr>
+	</table>
+        <p class="szh1">SF Actions: Security Assignment Analysis</p>
 	<table class="szTable">
 	   <tr>
 	      <td style="width:30%; vertical-align: top;">
