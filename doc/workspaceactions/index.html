@@ -156,8 +156,16 @@ title: Security Zen, Doc-Workspace
 	      </td>
 	      <td  style="width:70%">
 		    <p></p>
-                    <p class="szt">Determines which rows to show.  Options Include:</p>
-	      </td>
+                    <p class="szt szm0">Determines which rows to show.  Options Include:</p>
+		      <ul class="szm0">
+			      <li class="szt">All: Display all retrieved rows.</li>
+			      <li class="szt">Different: Only display rows that contain one or more differences in settings between retrieved security files.</li>
+			      <li class="szt">Same: Only display rows that are identical in settings for all retrieved security files.</li>
+			      <li class="szt">With Environment Differences: If you have retrieved the same security files from different environments, you can use Workspace Actions->Highlight Environment Differences.  After using the Highlight Environment Differences function, this option shows only rows with differences between environments.  Other rows will be hidden.</li>
+			      <li class="szt">By Type: You will be prompted with the supported entity types as shown.  Select the types of entities to be displayed.</li>
+			      <li class="szt">By Name: Enter the name of an entity (or part of a name).  Rows with entity names that contain the entered text will be displayed.</li>			   
+		      </ul>
+		   </td>
 	   </tr>
 	</table>
 	<p class="szh1">SF Actions: Security Assignment Analysis</p>
