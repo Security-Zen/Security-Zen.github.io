@@ -1,0 +1,82 @@
+---
+layout: default
+title: Security Zen, Doc-Workspace
+---
+<div class="blurb">
+	<p class="szh1">Workspace Actions</p>
+	<table class="szTable">
+	   <tr>
+	      <td style="width:10%; vertical-align: top;">
+	      </td>
+	      <td  style="width:90%">
+		    <p></p>
+        <p class="szt">Once you have retrieved security settings, the workspace will show the results. Now you can analyze, compare and contrast the security settings!</p>
+        <p class="szt">Want to compare security settings between environments?  Connect to a different environment and retrieve more settings.  When retrieving data, if the workspace already has data, you will be prompted to "clear the workspace".  Select "No" to keep the existing data and add the new data from another environment to the workspace.</p>
+        <p class="szh2">Color Coding</p>
+        <p class="szt">Cells will be automatically colored as follows:</p>
+          <ul>
+            <li class="szt">Green (or Blue): Most permissive setting.</li>
+            <ul>
+              <li class="szt">Green is the default, but Blue may be used instead by selecting "Red Yellow Blue" within Options->Color Scheme.</li>
+            </ul>
+            <li class="szt">Yellow: Middle permissive setting where applicable.</li>
+            <li class="szt">Red: Permission denied.</li>
+            <li class="szt">White (Blank): Permission not granted, but no change in security will be deployed to a target environment.</li>
+          </ul>
+        <p></p>
+	      </td>
+	   </tr>
+	</table>
+	<p class="szh1">SF Actions: Deploy...</p>
+	<table class="szTable">
+	   <tr>
+	      <td style="width:10%; vertical-align: top;">
+	      </td>
+	      <td  style="width:90%">
+		    <p></p>
+                    <p class="szt">Deploys security from the workspace to the currently connected environment.  Starting in version 3.1, all deploys are performed using ANT deploy method.  Upon deployment, a browser window will be automatically opened directing you to Setup->Environments->Deploy->Deployment Status in order to monitor the status of your deployment.</p>
+		    <p class="szt"><b>IMPORTANT:</b> Deploy of Muting Permission Sets is NOT supported due to Salesforce API restrictions.  Retrieve of Muting Permission Sets is provided for analysis and comparison purposes only.</p>
+                    <p class="szt">Starting in API 40, Permission Sets must be completely defined during a deploy.  This means the concept of deploying changes to a Permission Set for just some settings doesn't work anymore.  For this reason, Security Zen deploys are done at API 39.  This enables the ability to just change the security settings you are interested in for a particular function, but it also means we don't support deploying newer security features such as Muting Permission Sets.  Due to the limited use cases for Muting Permission Sets, we are comfortable that this is a good choice right now, but will continue to monitor changes in functionality and may revisit this decision in the future.</p>
+                    <p class="szt">* Deploy is only available to Security Zen Masters.</p>
+                    <p></p>
+	            <p class="szh2">What is the difference between blank and false in cells?</p>
+		    <p class="szt">Both blank and false means security is not granted.  However, in some areas the lack of a permission is not stored in Salesforce and therefore a particular security setting may show up as blank in the workspace.</p>
+		    <p class="szt"><b>Important!</b>  Blank cells are <b>NOT</b> deployed during a deploy command.</p>
+		    <p class="szt">Deploying a blank cell means the security for that cell will <b>NOT</b> be modified in the deployed environment.</p>
+		    <p class="szt">If you wish to remove security for a cell, the cell must be set to the appropriate setting for that entity type to remove security in the deployed environment.</p>
+	       </td>
+	   </tr>
+	</table>
+	<p class="szh1">SF Actions: View Deploy Details</p>
+	<table class="szTable">
+	   <tr>
+	      <td style="width:30%; vertical-align: top;">
+		   <p></p>
+		   <img style="width: 95%" src="DeployDetails.jpg" alt="View Deploy Details">
+	      </td>
+	      <td  style="width:70%">
+		    <p></p>
+                    <p class="szt">Want to see details of prior deployments?  Unfortunately, Salesforce only shows details of the failures.  This option lets you see both successful entities as well as failures for a particular deploy.</p>
+                    <p class="szt">To use this function, first connect to an environment and then select this function.   Copy the Deployment id from Setup->Environments->Deploy->Deployment Status and paste it into the View Deploy Details prompt and select Enter.</p>
+	      </td>
+	   </tr>
+	</table>
+	<p class="szh1">SF Actions: Security Assignment Analysis</p>
+	<table class="szTable">
+	   <tr>
+	      <td style="width:30%; vertical-align: top;">
+		   <p></p>
+		   <img style="width: 95%" src="security assignment flyers.png" alt="Security Assignment Analysis">
+	      </td>
+	      <td  style="width:70%">
+		    <p></p>
+                    <p class="szt">Want to identify outliers in how Profiles and Permission Sets are assigned?  Security Assignment Analysis creates a CSV file that groups users based on their Profile and Permission Set assignments.  Role information is also captured allowing you to identify if users are assigned the same security as their peers.</p>
+                    <p class="szt">Specifically, each row represents a unique combination of a Profile and Permission Sets.  For this unique combination of Profile and Permission Sets, all of the users and their roles as well as the count of security files, roles and users are provided as shown in the picture.  Each Permission Set, Role and User are specified on a new line within a cell.  Using tools such as Excel or Power BI allows you to analyze this data to identify users that are different than their peers based on Roles or Profiles.</p>
+		    <p class="szt">To use this function, first connect to an environment and then select this function.  After the analysis is complete, you will be prompted to save a CSV file with the results of the analysis.  The results will then be launched with the default application on your system for opening CSV files.</p>
+		    <p class="szt">Note that results will be limited by the Max Characters and Max Lines specified in the Options menu.  These options provide compatibility with limitations of commonly used tools that work with CSV files such as Excel and Power BI, but truncate results within cells if the limits are exceeded.</p>
+		    <p class="szt">*Security Assignment Analysis is only available to Security Zen Masters.</p>
+	       </td>
+	   </tr>
+	</table>
+      
+</div>
