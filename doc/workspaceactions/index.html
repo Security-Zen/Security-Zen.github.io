@@ -344,7 +344,7 @@ title: Security Zen, Doc-Workspace
 		   </ul>
 		   <p></p>
 		    <p class="szh2">Right Click on Security File Column Header or Selected Cells</p>
-		    <p class="szt">Note that some options may be greyed out depending on where the context menu is launched from.</p>
+		    <p class="szt szm0">Note that some options may be greyed out depending on where the context menu is launched from.</p>
 		    <ul class="szm0">
 		          <li class="szt">Copy (Ctrl+C)</li>
 		          <li class="szt">Paste (Ctrl+P)</li>
@@ -357,11 +357,28 @@ title: Security Zen, Doc-Workspace
 		          <li class="szt">Merge to New Permission Set - see explanation below</li>
 		      </ul>
 		   <p></p>
-		   <p></p>
 		    <p class="szh2">List Users*</p>
 		    <p class="szt">This option is only available when right clicking on a column header.  Provides list of users with selected profile or permission set.</p>
-		    <p class="szt">*  "List Users" feature is only available for Security Zen Masters. </p>
-	       </td>
+		    <p class="szt">*  "List Users" feature is only available for Security Zen Masters.</p>
+		   <p></p>
+		    <p class="szh2">Copy to New Permission Set</p>
+		    <p class="szt">This option is only available after you have selected cells from a single Profile, and then right click.  You will be prompted to provide a Name, Label and Description for a new Permission Set based on the selected Profile.</p>
+		    <p class="szt">Select "Ok" to create the new Permission Set which will be added as a new column in the workspace.  Entity permission values will be copied from the Profile to the new Permission Set with the following modifications:</p>
+		    <p class="szt szm0">Tab:</p>
+		    <ul class="szm0">
+		          <li class="szt">Default On -> Visible</li>
+		          <li class="szt">Default Off -> Available</li>
+		          <li class="szt">Hidden -> None</li>
+		      </ul>
+		    <p class="szt szm0">Record Types:</p>
+		    <ul class="szm0">
+		          <li class="szt">Default -> Visible</li>
+		      </ul>		      
+		      <p class="szt">Other entities will be copied with the same values as the source Profile.</p>
+		      <p class="szt">Only retrieved entities will be copied.  Entities not retrieved or not supported by Security Zen such as, but not limited to, Assigned Connected Apps, External Data Source Access, Named Credential Access, Data Category Visibility, Flow Access, and Service Presence Statuses Access will not be copied.</p>
+		      <p class="szt">You must "Deploy" the new Permission Set to Salesforce in order to create the new Permission Set in Salesforce.  Be sure to specify a new unique name for the Permission Set.  When you go to deploy the Permission Set, you should be prompted that you are "inserting" the Permission Set instead of "updating" an existing Permission Set.  If you are prompted that you are "updating" the Permission Set, then the Name of the Permission Set is not unique.</p>
+		      <p class="szt"><b>IMPORTANT:</b> Note that some differences may be introduced based on dependency requirements and differences between Profile and Permission Set structures.  It is recommended that after deploying the the copied Permission Set to Salesforce, a detailed comparison is performed between the original Profile and the copied Permission Set to identify any modifications introduced during deployment.</p>
+		</td>
 	   </tr>
 	</table>
       
