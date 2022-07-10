@@ -25,16 +25,37 @@ title: Security Zen, Doc-Options
 		      <li class="szt">Always: System Permissions are always loaded without prompting the user.</li>
 		      <li class="szt">Never: System Permissions are never loaded and user is not prompted.</li>
 	         </ul>
+		 <p></p>
 	         <p class="szt szm0">"Permission Set Entities Retrieved" determines what entities are retrieved when a Permission Set is specified.  Available Options:</p>
 	         <ul  class="szm0">
 		      <li class="szt">As Specified: Only entities specified in the Configure window are retrieved</li>
 		      <li class="szt">As Specified and All Entities Granted Permissions: Entities specified in the Configure window as well as all entities granted permissions in the Permission Set are retrieved.  When using this option, be advised that for entities not specified in the Configure window, only the Permission Set security is retrieved.  If a mixture of Profiles and Permission Sets is specified, the Profile security will only include entities specified in the Configure window.</li>
 	         </ul>
 		 <p></p>
-		 <p class="szh2"><a class="szhlink" href="/doc/sfactions">SF Actions</a></p>
-                 <p class="szt">Once you have made selections within Configure, select SF Actions->Retrieve to get the security settings from the Connection.  Watch the grid populate and get a whole new view of your security!</p>
-                 <p class="szt">You can also deploy to other environments using SF Actions->Deploy, view details of previous deployments using SF Actions->View Deploy Details or analyze how security is assigned to users using SF Actions->Security Assignment Analysis.</p>
-		 <p></p>
+		 <p class="szh2">Display Options</p>
+                 <p class="szt szm0"">"Color Scheme" determines the colors assigned to cells based on permissions.  Available Options:</p>
+                 <ul  class="szm0">
+		      <li class="szt">Red Yellow Green (stop light color scheme):</li>
+		      <ul>
+		         <li>Red = no access</li>
+		         <li>Yellow = some access</li>
+		         <li>Green = full access</li>
+		      </ul>
+		      <li class="szt">Red Yellow Blue (high contrast color scheme):</li>
+		      <ul>
+		         <li>Red = no access</li>
+		         <li>Yellow = some access</li>
+		         <li>Blue = full access</li>
+		      </ul>
+	         </ul>
+                 <p class="szt">"Header Rotation" determines the rotation of column headers.  0 degrees is horizontal.  90 degrees is vertical.  A range of 70-85 degrees seems to provide a good balance of readability and data density.</p>
+	         <p class="szt">"Font Size" determines the font size within the workspace.  Valid values are from 1 to 96, but more realistic values are usually between 6 and 12.  Default is 8.</p>
+		 <p class="szt">Note that large font sizes may cause the column headers to take up the entire height of the screen which makes the scroll bars disappear.  Don't panic!  To correct this, either use a smaller font size or go to the bottom of the headers and resize the height of the headers to be smaller.</p>
+		 <p class="szt">"Column Width" determines the column width in Pixels.  Default value is 70.  Specifying a Column Width of 0 enables Automatic Column Width which is based on the width of the Column Header.  Automatic Column Width is recommended in conjunction with a "Header Rotation" of 70-85 degrees.</p>
+		 <p class="szt">"Sort Rows" will cause the rows to be sorted upon retrieval.  Version 3.1 has significantly improved this function and is now recommended to be checked.</p>
+		 <p class="szt">"Active Users Only" determines whether all users, or just active users, are included in user queries.  This affects the following features:</p>
+
+	         <p></p>
 		 <p class="szh2"><a class="szhlink" href="/doc/workspaceactions">Workspace Actions</a></p>
                  <p class="szt">This is where the fun really starts!</p>
                  <p class="szt">You can sort, show/hide and much more to help you make sense of it all.  You can make changes directly in the workspace or highlight multiple cells and right click for even more options.  Ctrl+C and Ctrl+V are supported to easily copy and paste multiple cells.</p>
