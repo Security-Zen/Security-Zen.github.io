@@ -14,6 +14,7 @@ title: Security Zen, Doc-Options
 		 <p class="szh2">Connect Options</p>
                  <p class="szt">"Security Protocol" may be set to use TLS 1.1 or TLS 1.2. </p>
                  <p class="szt">Note that Salesforce required the change to TLS 1.2 back in 2019</p>
+		 <p class="szt">"ANT Package API Version" is the API version used while creating an ANT package.  This determines what Entity Types are available.  Set to a specific API version or set to 0 to automatically determine the API version based on the highest API version specified for Apex Classes in the connected environment.</p>
                  <p></p>
 		 <p class="szh2"><a class="szhlink" href="/doc/configure">Configure</a></p>
                  <p class="szt">Once a connection is established, select Configure->Configure Security to choose which security files (Profiles and/or Permission Sets) and which entities (Objects, Fields, Record Types, etc) you want to retrieve.  You must select at least one security file and at least one entity in order to retrieve security.</p>
