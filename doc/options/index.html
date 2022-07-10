@@ -75,20 +75,18 @@ title: Security Zen, Doc-Options
 		      </ul>
 		 </ul>
 		 <p></p>
-		 <p class="szh2"><a class="szhlink" href="/doc/workspaceactions">Workspace Actions</a></p>
-                 <p class="szt">This is where the fun really starts!</p>
-                 <p class="szt">You can sort, show/hide and much more to help you make sense of it all.  You can make changes directly in the workspace or highlight multiple cells and right click for even more options.  Ctrl+C and Ctrl+V are supported to easily copy and paste multiple cells.</p>
-                 <p class="szt">Alternatively, export to a CSV file for further analysis and then import changes back into Security Zen.</p>
-		 <p class="szt">Once you are happy with your changes, go back to SF Actions and select Deploy. Changes will be deployed to whatever is the current Connection. This gives you the flexibility to deploy your changes to the environment you retrieved security from or change connections and deploy to another environment.</p>
+		 <p class="szh2">Security Assignment Analysis Options</p>
+                 <p class="szt">"Max Characters" sets a maximum number of characters per cell populated during the Security Assignment Analysis.  Default is 32,767 which is maximum number of characters in an Excel cell.  If 0 is specified, no maximum number of characters is imposed.</p>
+                 <p class="szt">"Max Lines" sets a maximum number of lines per cell populated during the Security Assignment Analysis.  Default is 252 which is near the maximum number of lines in an Excel cell.  If 0 is specified, no maximum number of lines is imposed.</p>
+                 <p class="szt">If "Max Characters" or "Max Lines" are specified and these are exceeded for a given cell, the last line of the cell will indicate how many more lines were not written.</p>
+		 <p class="szt">If the maximums cell limits are not imposed and the contents of cells exceed the maximums that Excel support, columns may not display properly. </p>
 		 <p></p>
-		 <p class="szh2"><a class="szhlink" href="/doc/options">Options</a></p>
-                 <p class="szt">Options let you fine tune Security Zen to work best for you.</p>
-		 <p></p>
-		 <p class="szh2"><a class="szhlink" href="/doc/help">Help</a></p>
-                 <p class="szt">The Help menu provides quick access to the documentation and licensing to become a Security Zen Master.</p>
-		 <p></p>
-		 <p class="szh2"><a class="szhlink" href="/doc/releasehistory">Release History</a></p>
-                 <p class="szt">Version Release History.</p>
+		 <p class="szh2">Deploy Options</a></p>
+                 <p class="szt szm0">"Run Tests Before Deploy" controls whether tests are run as part of the ANT deploy.</p>
+	         <ul>
+		    <li class="szt">If checked, all tests are run and all tests must pass in order to successfully deploy changes.</li>
+		    <li class="szt">If unchecked, no tests are run.</li>
+	         </ul>
 		 <p></p>
 	      </td>
 	   </tr>
