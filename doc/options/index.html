@@ -33,7 +33,7 @@ title: Security Zen, Doc-Options
 	         </ul>
 		 <p></p>
 		 <p class="szh2">Display Options</p>
-                 <p class="szt szm0"">"Color Scheme" determines the colors assigned to cells based on permissions.  Available Options:</p>
+                 <p class="szt szm0">"Color Scheme" determines the colors assigned to cells based on permissions.  Available Options:</p>
                  <ul  class="szm0">
 		      <li class="szt">Red Yellow Green (stop light color scheme):</li>
 		      <ul>
@@ -53,9 +53,28 @@ title: Security Zen, Doc-Options
 		 <p class="szt">Note that large font sizes may cause the column headers to take up the entire height of the screen which makes the scroll bars disappear.  Don't panic!  To correct this, either use a smaller font size or go to the bottom of the headers and resize the height of the headers to be smaller.</p>
 		 <p class="szt">"Column Width" determines the column width in Pixels.  Default value is 70.  Specifying a Column Width of 0 enables Automatic Column Width which is based on the width of the Column Header.  Automatic Column Width is recommended in conjunction with a "Header Rotation" of 70-85 degrees.</p>
 		 <p class="szt">"Sort Rows" will cause the rows to be sorted upon retrieval.  Version 3.1 has significantly improved this function and is now recommended to be checked.</p>
-		 <p class="szt">"Active Users Only" determines whether all users, or just active users, are included in user queries.  This affects the following features:</p>
-
-	         <p></p>
+		 <p class="szt szm0">"Active Users Only" determines whether all users, or just active users, are included in user queries.  This affects the following features:</p>
+	         <ul class="szm0">
+		      <li class="szt">Number of users displayed in column headers for profiles and permission sets</li>
+		      <li class="szt">"List Users" displayed for profiles and permission sets when right clicking on column headers</li>
+		      <li class="szt">Selection of profiles and permission sets by user in Configure->Select->Security Files->Select By User</li>
+		      <li class="szt">Showing columns by user in Workspace Actions->Show Columns->By User</li>
+		      <li class="szt">Security Assignment Analysis</li>
+		 </ul>
+		 <p class="szt">"Show Hints" displays hints on the backgrounds of windows such as the Workspace and the Configure window.</p>
+		 <p class="szt szm0">Changes in Display Options are applied during the next retrieve operation except as follows:</p>
+	         <ul class="szm0">
+		      <li class="szt">"Column Width" is applied upon closing the Options window.</li>
+		      <li class="szt">"Active Users Only" affects the number of users per security file which is displayed in the workspace column headers.  The numbers displayed in the column headers are populated at the time of connection.  If you modify the "Active Users Only" flag, you will need to re-establish the connection in order to update the numbers displayed in the column headers.</li>
+		      <li class="szt">"Active Users Only" affects the following features at the time these features are used:</li>
+		      <ul>
+		         <li class="szt">Column Header (right click)->List Users</li>
+		         <li class="szt">Configure->Select->Security Files->Select By User</li>
+		         <li class="szt">SF Actions->Security Assignment Analysis</li>
+			 <li class="szt">Workspace Actions->Show Columns->By User</li>
+		      </ul>
+		 </ul>
+		 <p></p>
 		 <p class="szh2"><a class="szhlink" href="/doc/workspaceactions">Workspace Actions</a></p>
                  <p class="szt">This is where the fun really starts!</p>
                  <p class="szt">You can sort, show/hide and much more to help you make sense of it all.  You can make changes directly in the workspace or highlight multiple cells and right click for even more options.  Ctrl+C and Ctrl+V are supported to easily copy and paste multiple cells.</p>
