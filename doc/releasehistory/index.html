@@ -145,7 +145,19 @@ title: Security Zen, Doc-Release History
             <li class="szt">Added "Workspace Actions->Remove Entities From Workspace Not In Connection" function</li>
             <li class="szt">Added "Workspace Actions->Add Missing Objects To Workspace From Connection" function</li>
            </ul>
-		   <p></p>
+           <p></p>
+           <p class="szh2 szm0">2.6: 6/22/2019</p>
+           <p class="szt"><b>Configure:</b></p>
+           <ul class="szm0">
+            <li class="szt">Renamed "Configure->Import" to "Configure->Import Package File"</li>
+            <li class="szt">Renamed "Configure->Export" to "Configure->Export Package File"</li>
+            <li class="szt">Bug Fix: Import of a Package file is now additive instead of mimicking mouse clicks.  This change applies when Objects and either Fields, or Record Types, of that Object are both specified within a file.  Previously, each entry in the package file executed a mouse click of that entity in the Configure->Select tree which could lead to unexpected results depending on the order the entities are listed in the package file.  For example, previously, specifying the object first and then a custom field of that object would first select the object (which automatically selected the child fields) and then the custom field entry would de-select that custom field in the tree.  This behavior was not intuitive and has been changed with this release.  The new behavior in this release is additive, so if Objects and Fields (or Record Types) of that Object are both listed in the package file, all entities are selected in the tree no matter what order they are specified in the file.</li>
+            <li class="szt">Added ability to retrieve Objects Security without Field Level or Record Type Security</li>
+            <li class="szt">Separated out tab retrieval of Standard Objects from the Object selection</li>
+            <li class="szt">Added standard object "Document" under Object selection</li>
+            <li class="szt">Added option  "Only Show  Selections"</li>
+           </ul>
+           <p></p>
          </td>
 	   </tr>
   </table>
