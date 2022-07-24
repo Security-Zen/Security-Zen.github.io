@@ -1,0 +1,94 @@
+---
+layout: default
+title: Security Zen, Doc-Help
+---
+<div class="blurb">
+	<p class="szh1">Help</p>
+	<table class="szTable">
+	   <tr>
+	      <td style="width:10%"></td>
+	      <td  style="width:90%">
+		 <p></p>
+		 <p class="szt">Options let you fine tune Security Zen to work best for you.  Options will automatically be saved upon closing the window.</p>
+		 <p></p>
+		 <p class="szh2">Connect Options</p>
+                 <p class="szt">"Security Protocol" may be set to use TLS 1.1 or TLS 1.2.<br/>Note that Salesforce required the change to TLS 1.2 back in 2019</p>
+		 <p class="szt">"ANT Package API Version" is the API version used while creating an ANT package.  This determines what Entity Types are available.  Set to a specific API version or set to 0 to automatically determine the API version based on the highest API version specified for Apex Classes in the connected environment.</p>
+                 <p></p>
+		 <p class="szh2">Retrieve Options</p>
+                 <p class="szt">"Retrieve Max Number of Polls" is the maximum number of times that the server will be contacted to determine retrieve status.</p>
+                 <p class="szt">"Retrieve Poll Time (seconds)" is the amount of time to wait between Polls during a retrieve.</p>
+	         <p class="szt">Note: For larger data sets, the above numbers may need to be increased.</p>
+	         <p class="szt szm0">"Load System Permissions" determines whether System Permissions should be added to the workspace when a retrieve is performed.  Available Options:</p>
+	         <ul class="szm0">
+		      <li class="szt">Prompt: User is prompted each time to either load System Permissions or not.</li>
+		      <li class="szt">Always: System Permissions are always loaded without prompting the user.</li>
+		      <li class="szt">Never: System Permissions are never loaded and user is not prompted.</li>
+	         </ul>
+		 <p></p>
+	         <p class="szt szm0">"Permission Set Entities Retrieved" determines what entities are retrieved when a Permission Set is specified.  Available Options:</p>
+	         <ul  class="szm0">
+		      <li class="szt">As Specified: Only entities specified in the Configure window are retrieved</li>
+		      <li class="szt">As Specified and All Entities Granted Permissions: Entities specified in the Configure window as well as all entities granted permissions in the Permission Set are retrieved.  When using this option, be advised that for entities not specified in the Configure window, only the Permission Set security is retrieved.  If a mixture of Profiles and Permission Sets is specified, the Profile security will only include entities specified in the Configure window.</li>
+	         </ul>
+		 <p></p>
+		 <p class="szh2">Display Options</p>
+                 <p class="szt szm0">"Color Scheme" determines the colors assigned to cells based on permissions.  Available Options:</p>
+                 <ul  class="szm0">
+		      <li class="szt">Red Yellow Green (stop light color scheme):</li>
+		      <ul>
+		         <li class="szt">Red = no access</li>
+		         <li class="szt">Yellow = some access</li>
+		         <li class="szt">Green = full access</li>
+		      </ul>
+		      <li class="szt">Red Yellow Blue (high contrast color scheme):</li>
+		      <ul>
+		         <li class="szt">Red = no access</li>
+		         <li class="szt">Yellow = some access</li>
+		         <li class="szt">Blue = full access</li>
+		      </ul>
+	         </ul>
+                 <p class="szt">"Header Rotation" determines the rotation of column headers.  0 degrees is horizontal.  90 degrees is vertical.  A range of 70-85 degrees seems to provide a good balance of readability and data density.</p>
+	         <p class="szt">"Font Size" determines the font size within the workspace.  Valid values are from 1 to 96, but more realistic values are usually between 6 and 12.  Default is 8.</p>
+		 <p class="szt">Note that large font sizes may cause the column headers to take up the entire height of the screen which makes the scroll bars disappear.  Don't panic!  To correct this, either use a smaller font size or go to the bottom of the headers and resize the height of the headers to be smaller.</p>
+		 <p class="szt">"Column Width" determines the column width in Pixels.  Default value is 70.  Specifying a Column Width of 0 enables Automatic Column Width which is based on the width of the Column Header.  Automatic Column Width is recommended in conjunction with a "Header Rotation" of 70-85 degrees.</p>
+		 <p class="szt">"Sort Rows" will cause the rows to be sorted upon retrieval.  Version 3.1 has significantly improved this function and is now recommended to be checked.</p>
+		 <p class="szt szm0">"Active Users Only" determines whether all users, or just active users, are included in user queries.  This affects the following features:</p>
+	         <ul class="szm0">
+		      <li class="szt">Number of users displayed in column headers for profiles and permission sets</li>
+		      <li class="szt">"List Users" displayed for profiles and permission sets when right clicking on column headers</li>
+		      <li class="szt">Selection of profiles and permission sets by user in Configure->Select->Security Files->Select By User</li>
+		      <li class="szt">Showing columns by user in Workspace Actions->Show Columns->By User</li>
+		      <li class="szt">Security Assignment Analysis</li>
+		 </ul>
+		 <p class="szt">"Show Hints" displays hints on the backgrounds of windows such as the Workspace and the Configure window.</p>
+		 <p class="szt szm0">Changes in Display Options are applied during the next retrieve operation except as follows:</p>
+	         <ul class="szm0">
+		      <li class="szt">"Column Width" is applied upon closing the Options window.</li>
+		      <li class="szt">"Active Users Only" affects the number of users per security file which is displayed in the workspace column headers.  The numbers displayed in the column headers are populated at the time of connection.  If you modify the "Active Users Only" flag, you will need to re-establish the connection in order to update the numbers displayed in the column headers.</li>
+		      <li class="szt">"Active Users Only" affects the following features at the time these features are used:</li>
+		      <ul>
+		         <li class="szt">Column Header (right click)->List Users</li>
+		         <li class="szt">Configure->Select->Security Files->Select By User</li>
+		         <li class="szt">SF Actions->Security Assignment Analysis</li>
+			 <li class="szt">Workspace Actions->Show Columns->By User</li>
+		      </ul>
+		 </ul>
+		 <p></p>
+		 <p class="szh2">Security Assignment Analysis Options</p>
+                 <p class="szt">"Max Characters" sets a maximum number of characters per cell populated during the Security Assignment Analysis.  Default is 32,767 which is maximum number of characters in an Excel cell.  If 0 is specified, no maximum number of characters is imposed.</p>
+                 <p class="szt">"Max Lines" sets a maximum number of lines per cell populated during the Security Assignment Analysis.  Default is 252 which is near the maximum number of lines in an Excel cell.  If 0 is specified, no maximum number of lines is imposed.</p>
+                 <p class="szt">If "Max Characters" or "Max Lines" are specified and these are exceeded for a given cell, the last line of the cell will indicate how many more lines were not written.</p>
+		 <p class="szt">If the maximums cell limits are not imposed and the contents of cells exceed the maximums that Excel support, columns may not display properly. </p>
+		 <p></p>
+		 <p class="szh2">Deploy Options</a></p>
+                 <p class="szt szm0">"Run Tests Before Deploy" controls whether tests are run as part of the ANT deploy.</p>
+	         <ul class="szm0">
+		    <li class="szt">If checked, all tests are run and all tests must pass in order to successfully deploy changes.</li>
+		    <li class="szt">If unchecked, no tests are run.</li>
+	         </ul>
+		 <p></p>
+	      </td>
+	   </tr>
+  </table>
+</div>
