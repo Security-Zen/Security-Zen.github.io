@@ -90,6 +90,40 @@ title: Security Zen, Doc-Release History
                <li class="szt">Log in via OAUTH now supported.  This is still in beta, so feedback is especially appreciated for this feature</li>
             </ul>
             <p></p>
+            <li class="szt">Configure:</li>
+            <ul class="szm0">
+               <li class="szt">Drag and drop now supported to import Package File (.xml extension and .csv files exported by Security Zen) into Configure Window</li>
+               <li class="szt">Ability to select security files by Permission Set Groups</li>
+               <li class="szt">When configuring security files to retrieve, selecting security files by user now includes security files assigned to the user via Permission Set Groups</li>
+            </ul>
+            <p></p>
+            <li class="szt">SF Actions->View Deploy Details:</li>
+            <ul class="szm0">
+               <li class="szt">Provide the  ID of a deployment from Setup->Environments->Deploy->Deployment Status screen.  Returns details of deployment including list of successful and failed entities</li>
+            </ul>
+            <p></p>
+            <li class="szt">SF Actions->Retrieve:</li>
+            <ul class="szm0">
+               <li class="szt">Previously, if a record type is selected and no security files granted access to this record type, then no row for the record type was created.  Now, blank row for selected record type is added to grid</li>
+            </ul>
+            <p></p>
+            <li class="szt">Options Menu affecting SF Actions->Retrieve:  New option to manage entities retrieved for a Permission Set.  Previously, only selected entities were retrieved.  Now have option to either:</li>
+            <ul class="szm0">
+               <li class="szt">retrieve only selected entities as specified in the configure form (default) OR</li>
+               <li class="szt">retrieve selected entities as specified in the configure form as well as all other entities granted some level of access by the selected Permission Sets</li>
+            </ul>
+            <p></p>
+            <li class="szt">Options Menu affecting SF Actions->Deploy:</li>
+            <ul class="szm0">
+               <li class="szt">Deploy by API deprecated due to change in behavior of Salesforce API's between API versions - all deploys now done via ANT</li>
+            </ul>
+            <p></p>
+            <li class="szt">Options Menu affecting SF Actions->Security Assignment Analysis:</li>
+            <ul class="szm0">
+               <li class="szt">When Permission Set Group is assigned to user, the Permission Set Group is listed in the Security Assignment Analysis instead of the individual Permission Sets within the Permission Set Group</li>
+            </ul>
+            <p></p>
+            <li class="szt">Version 3.1 is a major overhaul of the code.  We request you provide feedback of your experience using this new version.</li>
            </ul>
            <p></p>
          </td>
