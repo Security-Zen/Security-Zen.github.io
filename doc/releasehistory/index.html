@@ -155,7 +155,20 @@ title: Security Zen, Doc-Release History
             <li class="szt">Added ability to retrieve Objects Security without Field Level or Record Type Security</li>
             <li class="szt">Separated out tab retrieval of Standard Objects from the Object selection</li>
             <li class="szt">Added standard object "Document" under Object selection</li>
-            <li class="szt">Added option  "Only Show  Selections"</li>
+            <li class="szt">Added option "Only Show  Selections"</li>
+           </ul>
+           <p class="szt"><b>Workspace Actions:</b></p>
+           <ul class="szm0">
+            <li class="szt">Renamed "Workspace Actions->Import" to "Workspace Actions->Import CSV File"</li>
+            <li class="szt">Renamed "Workspace Actions->Export" to "Workspace Actions->Export CSV File"</li>
+            <li class="szt">Bug Fix: Workspace Actions->Import CSV File now imports rows from CSV files that have all empty cells.  Previously, rows with all empty cells were skipped during the import process</li>
+            <li class="szt">Bug Fix: Workspace Actions->Import CSV File now ignores empty columns at the end of csv files.</li>
+            <li class="szt">Bug Fix: Workspace Actions->Import CSV File now trims white space of cell values which caused errors during import.</li>
+            <li class="szt">Improved error notification when importing CSV files to more clearly identify cells that have invalid values.</li>
+            <li class="szt">Added "Highlight Environ Diff" function to more easily identify security differences between environments</li>
+            <li class="szt">Bug Fix: Repaired "Reset Values" functionality</li>
+            <li class="szt">Added "Workspace Actions->Import Metadata".  This enables import of metadata from ANT security files.</li>
+            <li class="szt">Added "Workspace Actions->Export Metadata".  This enables export of metadata to ANT security files.</li>
            </ul>
            <p></p>
          </td>
